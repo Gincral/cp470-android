@@ -2,4 +2,11 @@
     <string name="app_name">Assignment 1</string>
     <string name="hello_message">Hello World</string>
     <string name="ButtonText">I\'m a button</string>
+    <string name="login_message">login</string>
+    <string name="password_message">password</string>
+    <string name="radioButton">Radio Button</string>
+    <string name="checkBox">Check Box</string>
+    <string name="string1"> What does this do?</string>
+    <string name="camera_image">Image for camera</string>
+    <string name="login_hint">login name</string>
 </resources>

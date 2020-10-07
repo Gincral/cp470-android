@@ -3,4 +3,11 @@
     <string name="app_name">Assignment</string>
     <string name="hello_message">Hello World ;D</string>
     <string name="ButtonText">I\'m a button >:3</string>
+    <string name="login_message">CA:login</string>
+    <string name="password_message">CA:password</string>
+    <string name="radioButton">CA:Radio Button</string>
+    <string name="checkBox">CA:Check Box</string>
+    <string name="string1">CA:What does this do?</string>
+    <string name="camera_image">CA:Image for camera</string>
+    <string name="login_hint">login name</string>
 </resources>
