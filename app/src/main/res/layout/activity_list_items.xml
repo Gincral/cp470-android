@@ -36,5 +36,4 @@
         android:contentDescription="camera_image"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
-
 </GridLayout>

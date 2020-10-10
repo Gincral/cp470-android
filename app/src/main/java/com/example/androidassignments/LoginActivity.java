@@ -26,9 +26,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveSharedPreferences();
+                goToMainActivity();
             }
         });
-
         loadSharedPreferences();
     }
 
@@ -42,6 +42,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onPause() {
         android.util.Log.i(ACTIVITY_NAME, "In onPause()");
         super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        android.util.Log.i(ACTIVITY_NAME, "In onResume()");
+        super.onResume();
     }
 
     @Override
@@ -67,5 +73,10 @@ public class LoginActivity extends AppCompatActivity {
         android.util.Log.i(ACTIVITY_NAME, "In load()");
         android.content.SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE_LOGIN, MODE_PRIVATE);
         loginEditText.setText(sharedPreferences.getString(DEFAULT_EMAIL, "email@domain.com"));
+    }
+
+    public void goToMainActivity(){
+        android.content.Intent intent = new android.content.Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

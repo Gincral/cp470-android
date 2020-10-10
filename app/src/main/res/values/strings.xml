@@ -9,4 +9,8 @@
     <string name="string1"> What does this do?</string>
     <string name="camera_image">Image for camera</string>
     <string name="login_hint">login name</string>
+    <string name="dialog_message">Do you want to finish this page?</string>
+    <string name="dialog_title">You clicked the checkBox!</string>
+    <string name="ok">Sure</string>
+    <string name="cancel">Nope</string>
 </resources>
