@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">作业 1</string>
+    <string name="app_name">随便怎么写反正TA看不懂嘻嘻</string>
     <string name="hello_message">你好👋</string>
     <string name="ButtonText">我是个巴腾；3</string>
+    <string name="login_message">用户名</string>
+    <string name="password_message">密码</string>
+    <string name="radioButton">广播巴腾</string>
+    <string name="checkBox">检查盒</string>
+    <string name="string1">这干哈呢?</string>
+    <string name="camera_image">Image for 照相机</string>
+    <string name="login_hint">用户名?</string>
+    <string name="dialog_message">Do you want to finish this page?</string>
+    <string name="dialog_title">吸吸!</string>
+    <string name="ok">好滴</string>
+    <string name="cancel">嘻嘻</string>
 </resources>
