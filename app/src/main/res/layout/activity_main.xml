@@ -23,7 +23,7 @@
         android:layout_height="43dp"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:layout_marginBottom="293dp"
@@ -32,5 +32,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button_sc"
+        android:layout_width="213dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/start_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
