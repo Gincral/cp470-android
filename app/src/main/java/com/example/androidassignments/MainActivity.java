@@ -24,6 +24,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,10);
             }
         });
+
+        loginButton = findViewById(R.id.button_sc);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.util.Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                android.content.Intent intent = new android.content.Intent(MainActivity.this, ChatWindowActivity.class);
+                startActivityForResult(intent,10);
+            }
+        });
     }
 
     @Override

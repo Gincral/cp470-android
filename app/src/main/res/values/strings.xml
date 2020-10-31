@@ -13,4 +13,6 @@
     <string name="dialog_title">You clicked the checkBox!</string>
     <string name="ok">Sure</string>
     <string name="cancel">Nope</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="send_button">Send</string>
 </resources>
