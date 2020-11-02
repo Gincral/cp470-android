@@ -15,8 +15,10 @@
     <string name="cancel">Nope</string>
     <string name="start_chat">Start Chat</string>
     <string name="send_button">Send</string>
+    <string name="back_to_previous">Do you want to go back?</string>
+
     <string name="title_activity_test_toolbar">TestToolbar</string>
-    <!-- Strings used for fragments for navigation -->
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

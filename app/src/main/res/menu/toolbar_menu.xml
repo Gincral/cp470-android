@@ -15,5 +15,8 @@
         android:icon="@drawable/tiger"
         android:orderInCategory="101"
         app:showAsAction="always" />
-
+    <item android:id="@+id/about"
+        android:title="about"
+        android:orderInCategory="102"
+        app:showAsAction="never" />
 </menu>
