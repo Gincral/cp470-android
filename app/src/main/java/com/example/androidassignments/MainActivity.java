@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "MainActivity";
     private android.widget.Button loginButton;
+    private android.widget.Button chatButton;
+    private android.widget.Button toolBarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        loginButton = findViewById(R.id.button_sc);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        chatButton = findViewById(R.id.button_sc);
+        chatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 android.util.Log.i(ACTIVITY_NAME, "User clicked Start Chat");
@@ -34,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,10);
             }
         });
+
+        toolBarButton = findViewById(R.id.toolbar_btn);
+        toolBarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.util.Log.i(ACTIVITY_NAME, "User clicked Test Toolbar");
+                android.content.Intent intent = new android.content.Intent(MainActivity.this, TestToolbar.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

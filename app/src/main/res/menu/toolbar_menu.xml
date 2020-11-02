@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_one"
+        android:title="Choice 1"
+        android:icon="@drawable/comedy"
+        android:orderInCategory="000"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_two"
+        android:title="Choice 2"
+        android:icon="@drawable/mummy"
+        android:orderInCategory="001"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_three"
+        android:title="Choice 3"
+        android:icon="@drawable/tiger"
+        android:orderInCategory="101"
+        app:showAsAction="always" />
+
+</menu>
