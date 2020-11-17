@@ -43,7 +43,6 @@ public class WeatherForecast extends Activity {
     TextView current_temp;
     TextView min_temp;
     TextView max_temp;
-    TextView wind_speed;
     List <String> cityList;
 
     @Override
@@ -202,8 +201,8 @@ public class WeatherForecast extends Activity {
             progressBar.setVisibility(View.INVISIBLE);
             imageView.setImageBitmap(picture);
             current_temp.setText(currentTemp + "C\u00b0");
-            min_temp.setText(minTemp + "C\u00b0");
-            max_temp.setText(maxTemp + "C\u00b0");
+            min_temp.setText("Min: "+minTemp + "C\u00b0");
+            max_temp.setText("Max: "+maxTemp + "C\u00b0");
         }
 
         @Override
