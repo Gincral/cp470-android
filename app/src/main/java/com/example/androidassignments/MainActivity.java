@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private android.widget.Button loginButton;
     private android.widget.Button chatButton;
     private android.widget.Button toolBarButton;
+    private android.widget.Button weatherButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 android.util.Log.i(ACTIVITY_NAME, "User clicked Test Toolbar");
                 android.content.Intent intent = new android.content.Intent(MainActivity.this, TestToolbar.class);
+                startActivity(intent);
+            }
+        });
+
+        weatherButton = findViewById(R.id.button3);
+        weatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.util.Log.i(ACTIVITY_NAME, "User clicked weather Button");
+                android.content.Intent intent = new android.content.Intent(MainActivity.this, WeatherForecast.class);
                 startActivity(intent);
             }
         });
