@@ -6,13 +6,16 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ChatWindowActivity extends AppCompatActivity {
+public class ChatWindowActivity<frameLayout> extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "ChatWindowActivity";
     private android.widget.ListView listView;
@@ -21,6 +24,8 @@ public class ChatWindowActivity extends AppCompatActivity {
     private java.util.ArrayList<String> stringArrayList = new java.util.ArrayList();
     private ChatDatabaseHelper chatDatabaseHelper;
     private SQLiteDatabase db;
+    private FrameLayout frameLayout;
+    private ArrayList arrayId = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,8 @@ public class ChatWindowActivity extends AppCompatActivity {
         while(cursor.moveToNext()) {
             String message = cursor.getString(cursor.getColumnIndexOrThrow(chatDatabaseHelper.KEY_MESSAGE));
             stringArrayList.add(message);
+            long id = cursor.getLong(cursor.getColumnIndexOrThrow(chatDatabaseHelper.KEY_ID));
+            arrayId.add(id);
             Log.i(ACTIVITY_NAME, "SQL MESSAGE: " + cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
         }
         cursor.close();
@@ -50,10 +57,30 @@ public class ChatWindowActivity extends AppCompatActivity {
         listView = findViewById(R.id.chatView);
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.send_button);
+        frameLayout = findViewById(R.id.frame_layout);
+        if(frameLayout != null){
+            Log.i(ACTIVITY_NAME, "Using Tablet Layout");
+        }
 
         final ChatAdapter messageAdapter =new ChatAdapter( this );
         listView.setAdapter(messageAdapter);
-
+//        listView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                DisplayMetrics metrics = new DisplayMetrics();
+//                getWindowManager().getDefaultDisplay().getMetrics(metrics);
+//                int width = metrics.widthPixels;
+//                if (width > 600 ){
+//                    android.util.Log.i(ACTIVITY_NAME, "Using Tablet");
+//
+//                }else{
+//                    android.util.Log.i(ACTIVITY_NAME, "Using Phone");
+//                    android.content.Intent intent = new android.content.Intent(ChatWindowActivity.this, MessageDetails.class);
+//                    startActivity(intent);
+//                }
+//
+//            }
+//        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +95,7 @@ public class ChatWindowActivity extends AppCompatActivity {
                 android.util.Log.i("INSERT ROW", String.valueOf(newRowId));
             }
         });
+
     }
 
     @Override
@@ -88,6 +116,10 @@ public class ChatWindowActivity extends AppCompatActivity {
 
         public String getItem(int position){
             return stringArrayList.get(position);
+        }
+
+        public long getItemId(int position) {
+            return (long) arrayId.get(position);
         }
 
         public View getView(int position, View convertView, android.view.ViewGroup parent){
